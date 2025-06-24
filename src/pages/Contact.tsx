@@ -8,21 +8,33 @@ const Contact: React.FC = () => {
         <input
           type="text"
           placeholder="Your Name"
-          className="w-full p-3 rounded bg-gray-800 border border-gray-700"
+          className="w-full p-3 rounded bg-white border border-gray-300 
+      text-gray-700 placeholder-gray-500
+      focus:text-gray-500 focus:placeholder-gray-400
+      focus:border-gray-600 focus:outline-none"
         />
         <input
           type="email"
           placeholder="Email"
-          className="w-full p-3 rounded bg-gray-800 border border-gray-700"
+          className="w-full p-3 rounded bg-white border border-gray-300 
+      text-gray-700 placeholder-gray-500
+      focus:text-gray-500 focus:placeholder-gray-400
+      focus:border-gray-600 focus:outline-none"
         />
         <textarea
           placeholder="Message"
           rows={4}
-          className="w-full p-3 rounded bg-gray-800 border border-gray-700"
+          className="w-full p-3 rounded bg-white border border-gray-300 
+      text-gray-700 placeholder-gray-500
+      focus:text-gray-400 focus:placeholder-gray-400
+      focus:border-gray-600 focus:outline-none active:outline-none"
         ></textarea>
         <button
           type="submit"
-          className="bg-yellow-400 text-black px-6 py-2 rounded hover:bg-yellow-300 transition"
+          className="!bg-yellow-400
+    px-6 py-2 rounded
+    hover:bg-yellow-600  /* same yellow on hover */
+    transition-colors"
         >
           Send Message
         </button>

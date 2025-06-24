@@ -1,20 +1,29 @@
 import React from "react";
+import by1 from "../assets/images/bybijj1.png";
+import by2 from "../assets/images/bybijj2.png";
+import by3 from "../assets/images/bybijj3.png";
 
-const ByBijj: React.FC = () => {
-  return (
-    <section className="max-w-3xl mx-auto mt-16 text-gray-300 animate-fade-in">
-      <h2 className="text-4xl font-bold text-yellow-400 mb-4">By Bijj</h2>
-      <p>
-        By Bijj is my creative outlet where I design playful postcards,
-        flashcards for kids, and even quirky t-shirts. It’s a blend of love,
-        culture, and storytelling.
-      </p>
-      <p className="mt-4">
-        My goal is to make education more colorful and design more
-        meaningful—especially for the little ones.
-      </p>
-    </section>
-  );
-};
+const images = [
+  { src: by1, alt: "Creative postcard design" },
+  { src: by2, alt: "Children's flashcards" },
+  { src: by3, alt: "Quirky t-shirt artwork" },
+];
 
-export default ByBijj;
+const ByBijj: React.FC = () => (
+  <div className="w-full bg-white text-gray-900 py-16 px-6">
+    <h2 className="text-4xl font-bold mb-8 text-center">By Bijj</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {images.map((img, idx) => (
+        <div key={idx} className="relative overflow-hidden group rounded-lg">
+          <img
+            src={img.src}
+            alt={img.alt}
+            className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-slate-200 bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+export { ByBijj };
